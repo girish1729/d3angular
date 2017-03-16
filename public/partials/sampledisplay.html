@@ -1,0 +1,67 @@
+<div  ng-app="D3Angular" layout="row">
+    <div  flex="80" layout="column" layout-align="center
+none">
+
+    <div flex="80">
+      <md-card>
+       <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2><span>
+<md-icon aria-label="copyright" class="material-icons">copyright</md-icon>
+	D3Angular feed display</span></h2>
+          </div>
+        </md-toolbar>
+
+<md-slider-container>
+      <label>Sample size</label>
+<md-slider md-discrete ng-change="drawsamples()" ng-model="sampleSize" step="20" min="10" max="100">
+</md-slider>
+      <md-input-container>
+        <input flex type="number" ng-model="sampleSize" aria-label="red"
+aria-controls="red-slider">
+      </md-input-container>
+</md-slider-container>
+
+
+    <md-tabs flex layout="column" layout-fill  md-dynamic-height >
+
+      <md-tab label="Bar charts" >
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Bar charts</h1>
+ 
+		<div  draw-graph>
+			<md-card>
+		        <md-card-title>
+		          <md-card-title-text>
+		            <span class="md-headline">Bar chart </span>
+		          </md-card-title-text>
+		       </md-card-title>
+		    		<svg id="bar"></svg>
+			</md-card>
+		 </div>
+       </md-content>
+      </md-tab>
+
+      <md-tab label="Line charts" >
+       		<md-content class="md-padding">
+          <h1 class="md-display-2">Line charts</h1>
+ 
+		<div>
+			<md-card>
+		        <md-card-title>
+		          <md-card-title-text>
+		            <span class="md-headline">Line charts</span>
+		          </md-card-title-text>
+		        </md-card-title>
+		    		<svg id="line"></svg>
+		    </md-card>
+		 </div>
+       </md-content>
+      </md-tab>
+    </md-tabs>
+
+   </md-card>
+   </div>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+{
+  "name": "dbservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "d3_dbserv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "pg-promise": "^5.6.4"
+  }
+}
