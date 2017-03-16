@@ -1,18 +1,24 @@
 Simple D3 graphing with angular integration
 ===========================================
 
-This project does d3 rendering of time series data(double precision)
-with Angular.js factory and nvd3 rendering using JSON.
+This project does d3 rendering of time series data
+(double precision float)
+with Angular.js factory and nvd3 rendering using JSON
+ from a HTTP express server fetching samples from postgres DB.
 
 Overview
 ========
 
-Using a simple Angular.js module I demonstrate how 
- you can show double precision sample values changing against timestamps
+Using a simple Angular.js module we see how
+ you can show double precision sample values 
+against timestamps
 from a database.
 
 We use Google's Angular material and this is based on
  material design principles.
+
+You find as and when you move slider the graph gets updated dynamically
+demonstrating Angular's data binding principles.
 
 Populate DB
 ===========
@@ -24,9 +30,14 @@ Here is how you populate it.
 ```
 psql -U postgres
 psql> create database d3samples;
+psql> \c d3samples;
 psql> create table d3samples(id serial,feed_id integer, ts timestamp,val
 double precision);
 psql> insert into d3samples values(DEFAULT, 20, 'now()', 23432.343);
+psql> insert into d3samples values(DEFAULT, 20, 'now()', 32.0343);
+psql> insert into d3samples values(DEFAULT, 20, 'now()', 132.0343);
+psql> insert into d3samples values(DEFAULT, 20, 'now()', 82.038);
+psql> insert into d3samples values(DEFAULT, 20, 'now()', 92.033);
 ...
 psql>quit
 ```
